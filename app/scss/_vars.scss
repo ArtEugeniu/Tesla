@@ -1,0 +1,25 @@
+$white: #ffffff;
+$dark: #0b0b0b;
+$brand-color: #b70021;
+$background-color: #690102;
+
+%roboto {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+%robotoCondenced {
+    font-family: 'Roboto-Condenced';
+    font-weight: 400;
+}
+
+%robotoCondenced-Bold {
+    font-family: 'Roboto-Condenced';
+    font-weight: 600;
+}
+
+%background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }

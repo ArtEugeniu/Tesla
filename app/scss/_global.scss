@@ -1,0 +1,37 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  color: $white;
+  @extend %roboto;
+  background-color: $dark;
+  font-size: 24px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.button-primary {
+  padding: 30px 61px;
+  border: 1px solid #fff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  @extend %robotoCondenced-Bold;
+  transition: background-color 0.4s;
+
+  &:hover:hover {
+    background-color: $background-color;
+  }
+}
