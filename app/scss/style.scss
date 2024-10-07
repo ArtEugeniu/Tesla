@@ -34,66 +34,22 @@
 
   &__menu {
     background-color: #0b0b0b;
-    position: absolute;
-    width: 100%;
-    left: -2000px;
-    height: 101vh;
-    overflow: hidden;
-    transition: 0.5s;
-  }
-
-  &__menu-open {
-    left: 0;
-  }
-
-  &__menu-list {
-    position: relative;
-    left: 360px;
-    margin-top: 150px;
-  }
-
-  &__menu-item {
-    font-size: 48px;
-    margin-bottom: 54px;
-    @extend %robotoCondenced-Bold;
-    position: relative;
-    transition: 0.3s;
-  }
-
-  &__menu-link {
-    display: block;
-    width: 368px;
-    padding-bottom: 14px;
-    transition: 0.3s;
-
-    &:hover {
-      color: $brand-color;
-      padding-left: 25px;
-
-      &::before {
-        width: 368px;
-      }
-    }
-  }
-
-  &__menu-link::after,
-  &__menu-link::before {
-    content: "";
-    width: 368px;
-    height: 2px;
-    background-color: $brand-color;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    transition: 0.3s;
-  }
-
-  &__menu-link::before {
-    width: 0;
-    background-color: #fff;
-    z-index: 11;
   }
 }
+
+&__menu {
+  background-color: #0b0b0b;
+
+}
+
+&__menu-list {
+  background-color: #0b0b0b;
+}
+
+&__menu-item {
+  background-color: #0b0b0b;
+}
+
 
 .burger {
   width: 60px;
@@ -101,26 +57,27 @@
   position: relative;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.1);
-  cursor: pointer;
 
-  &::after,
+  &::after {
+    content: '';
+    width: 36px;
+    height: 2px;
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    top: 16.25px;
+    right: 12px;
+  }
+
   &::before {
     content: '';
     width: 36px;
     height: 2px;
     position: absolute;
+    display: block;
     background-color: #fff;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: transform 0.4s ease, top 0.3s ease;
-  }
-
-  &::before {
-    top: 20px; // Верхняя полоска
-  }
-
-  &::after {
-    top: 40px; // Нижняя полоска
+    bottom: 16.25px;
+    right: 12px;
   }
 
   span {
@@ -129,26 +86,8 @@
     background-color: #fff;
     display: block;
     position: absolute;
-    left: 50%;
-    top: 30px; // Средняя полоска посередине
-    transform: translateX(-50%);
-    transition: opacity 0.3s ease;
-  }
-
-  &.burger__open {
-    &::before {
-      top: 30px; // Смещаем к центру
-      transform: translate(-50%, -50%) rotate(45deg); // Поворачиваем на 45 градусов
-    }
-
-    &::after {
-      top: 30px; // Смещаем к центру
-      transform: translate(-50%, -50%) rotate(-45deg); // Поворачиваем на -45 градусов
-    }
-
-    span {
-      opacity: 0; // Скрываем среднюю полоску
-    }
+    right: 12px;
+    top: 28.5px
   }
 }
 
@@ -398,10 +337,9 @@
       right: -16px;
     }
   }
-}
 
-.slider__hide {
-  z-index: 0;
+
+  
 }
 
 @import 'media';
